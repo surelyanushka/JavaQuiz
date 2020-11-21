@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 public class FinalScore extends AppCompatActivity {
 
-
+//This is the final activity
     private Button play_again;
 
     int final_score = Quiz.get_score();
