@@ -14,7 +14,6 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
@@ -22,7 +21,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Quiz extends AppCompatActivity implements View.OnClickListener{
+public class Python extends AppCompatActivity implements View.OnClickListener{
 
     private TextView question, score;
     private Button option1;
@@ -41,7 +40,7 @@ public class Quiz extends AppCompatActivity implements View.OnClickListener{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_quiz);
+        setContentView(R.layout.activity_python);
 
         option1 = (Button) findViewById(R.id.btn1);
         option2 = (Button) findViewById(R.id.btn2);
@@ -56,7 +55,7 @@ public class Quiz extends AppCompatActivity implements View.OnClickListener{
         option3.setOnClickListener(this);
         option4.setOnClickListener(this);
 
-        loadingDialog = new Dialog(Quiz.this);
+        loadingDialog = new Dialog(Python.this);
         loadingDialog.setContentView(R.layout.loading_progressbar);
         loadingDialog.setCancelable(false);
         loadingDialog.getWindow().setBackgroundDrawableResource(R.drawable.progress_background);
@@ -81,7 +80,7 @@ public class Quiz extends AppCompatActivity implements View.OnClickListener{
 //        questionList.add(new Question("question4","A","B", "C","D",4));
 
         questionList = new ArrayList<>();
-        firestore.collection("QUIZ").document("Categories").collection("CAT1")
+        firestore.collection("QUIZ").document("Categories").collection("CAT2")
                 .get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
@@ -101,7 +100,7 @@ public class Quiz extends AppCompatActivity implements View.OnClickListener{
                     setQuestion();
                 }else
                 {
-                    Toast.makeText(Quiz.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Python.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                 }
                 loadingDialog.cancel();
 
@@ -167,9 +166,9 @@ public class Quiz extends AppCompatActivity implements View.OnClickListener{
 
         }
         else{
-            Intent intent = new Intent(Quiz.this, FinalScore.class);
+            Intent intent = new Intent(Python.this, FinalScore2.class);
             startActivity(intent);
-            Quiz.this.finish();
+            Python.this.finish();
         }
     }
 

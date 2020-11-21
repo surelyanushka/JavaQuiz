@@ -8,24 +8,24 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class FinalScore extends AppCompatActivity {
+public class FinalScore2 extends AppCompatActivity {
 
 
     private Button play_again;
 
-    int final_score = Quiz.get_score();
+    int final_score = Python.get_score();
     private TextView score_display;
     private String result;
 
     public void onBackPressed(){
-        Intent intent = new Intent(FinalScore.this, Category.class);
+        Intent intent = new Intent(FinalScore2.this, Category.class);
         startActivity(intent);
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_final_score);
+        setContentView(R.layout.activity_final_score2);
 
         score_display = (TextView) findViewById(R.id.display_score);
         result = final_score + "/5";
@@ -36,7 +36,7 @@ public class FinalScore extends AppCompatActivity {
         play_again.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(FinalScore.this, Category.class);
+                Intent intent = new Intent(FinalScore2.this, Category.class);
                 startActivity(intent);
                 finish();
 

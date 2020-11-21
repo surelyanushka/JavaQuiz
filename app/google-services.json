@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1037077352486",
+    "firebase_url": "https://java-mini-project-53e6a.firebaseio.com",
+    "project_id": "java-mini-project-53e6a",
+    "storage_bucket": "java-mini-project-53e6a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1037077352486:android:ee59c7f17531b4dac356e7",
+        "android_client_info": {
+          "package_name": "com.example.javaquiz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1037077352486-4jnk6ps371jjlrssb0am6ivri6l68cn2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.javaquiz",
+            "certificate_hash": "fd87fb4ffbfe19a2d76f28e82d164cae7aa7ff8b"
+          }
+        },
+        {
+          "client_id": "1037077352486-ioqeojm6m7ddb65v8ij8hvhdikp8268n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVK1OP_NecCkNe2wYvwnf0UGuAnDUiZaw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1037077352486-ioqeojm6m7ddb65v8ij8hvhdikp8268n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
