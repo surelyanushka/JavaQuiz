@@ -73,11 +73,6 @@ public class Python extends AppCompatActivity implements View.OnClickListener{
     }
 
     private void getQuestionList(){
-//        questionList = new ArrayList<>();
-//        questionList.add(new Question("question1","A","B", "C","D",2));
-//        questionList.add(new Question("question2","A","B", "C","D",2));
-//        questionList.add(new Question("question3","A","B", "C","D",1));
-//        questionList.add(new Question("question4","A","B", "C","D",4));
 
         questionList = new ArrayList<>();
         firestore.collection("QUIZ").document("Categories").collection("CAT2")

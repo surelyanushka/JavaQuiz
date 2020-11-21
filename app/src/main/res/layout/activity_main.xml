@@ -12,7 +12,6 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="200dp"
         android:text="Java Quiz"
-        android:textColor="@color/black"
         android:textStyle="bold"
         android:textSize="35sp"
         app:layout_constraintBottom_toBottomOf="parent"
